@@ -12,3 +12,11 @@ body{
     display: grid;
     margin: auto;
 }
+
+.cell{
+    user-select: none;
+}
+
+.cell:hover{
+    background-color: black;
+}
