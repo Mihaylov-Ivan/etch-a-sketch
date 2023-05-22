@@ -17,6 +17,10 @@ body{
     user-select: none;
 }
 
-.cell:hover{
+.black{
     background-color: black;
 }
+
+/* .cell:hover{
+    background-color: black;
+} */

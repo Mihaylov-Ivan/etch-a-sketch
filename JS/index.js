@@ -1,8 +1,6 @@
 const body = document.querySelector('body');
 let numberOfSquares = 0;
 let cells = [];
-let mouseDown = false;
-let currentCell = "";
 
 do numberOfSquares = prompt("Please, choose a gird size between 5 and 100.");
 while (numberOfSquares < 5 || numberOfSquares > 100);
@@ -17,17 +15,34 @@ for(let i=0; i<numberOfSquares**2; i++){
 
 cells.forEach(addCell);
 
-body.onmouseover = function(e) {
-    // console.log(e);
+let cellElements = Array.from(document.querySelectorAll('.cell'));
 
-    // currentCellName = e.target.localName;
-    // let cell = document.querySelector(currentCellName);
-    // cell.style.cssText = "background-color: black;";
-}
+console.log(cellElements);
 
-body.onmousedown = function(e) {
-    console.log(e);
-}
+cellElements.forEach(cellElement => function() {
+    cellElement.addEventListener('mouseover',() => {
+        cellElement.classList.add('black');
+    })
+
+    console.log(cellElement.classList);
+
+});
+
+
+// body.onmouseover = function(e) {
+
+
+
+//     // console.log(e);
+
+//     // currentCellName = e.target.localName;
+//     // let cell = document.querySelector(currentCellName);
+//     // cell.style.cssText = "background-color: black;";
+// }
+
+// body.onmousedown = function(e) {
+//     console.log(e);
+// }
 
 function setBodyCSS()
 {
