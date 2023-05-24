@@ -9,18 +9,42 @@ html{
 }
 
 body{
+    /* margin: auto; */
+    /* margin: 15px 15px; */
     display: grid;
-    margin: auto;
+    height: 100%;
+    width: 100%;
+    grid-template-rows: [title] min-content [sketch-grid] auto;
+    grid-template-columns: [col1] 1fr [col2] 1fr;
+}
+
+h1{
+    text-align: center;
+    align-self: center;
+    padding-top: 15px;
+}
+
+button{
+    width: 100px;
+    height: 30px;
+    justify-self: center;
+    align-self:self-end;
+    font-size: 16px;
+}
+
+#grid{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    padding: 15px 0;
+    grid-column: span 2;
 }
 
 .cell{
     user-select: none;
+    border: 1px black solid;
 }
 
 .black{
-    background-color: black;
+    background-color: hwb(0 0% 0%);
 }
-
-/* .cell:hover{
-    background-color: black;
-} */
